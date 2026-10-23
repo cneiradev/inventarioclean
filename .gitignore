@@ -1,0 +1,26 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+*.class
+*.jar
+*.war
+
+# Env / runtime
+.env
+.env.local
+*.log
+nohup.out
+data/
+*.db
+
+# IDE
+.idea/
+.vscode/
+*.iws
+*.iml
+.apt_generated/
+.factorypath
+.project
+.classpath
+
+# OS
+.DS_Store

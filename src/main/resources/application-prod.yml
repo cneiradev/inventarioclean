@@ -1,0 +1,44 @@
+# Perfil de produccion (Railway).
+#
+# Solo endurece lo que no va en desarrollo. Los secretos (JWT_SECRET,
+# SPRING_DATASOURCE_*, ALLOWED_ORIGINS) se configuran como variables de
+# entorno en la plataforma, nunca en este archivo.
+
+server:
+  # Puerto FIJO a proposito. El dominio de Railway esta configurado con
+  # Target Port = 8080, asi que la app debe escuchar ahi exactamente.
+  #
+  # LECCION (ligadecampeones-backend): usar ${PORT:8080} rompe el deploy.
+  # Railway inyecta SIEMPRE la variable PORT con su puerto interno
+  # (p. ej. 37241), Spring escucha ahi y el proxy manda todo al 8080
+  # -> 502 en cada request. Si cambias el Target Port, cambia esto.
+  port: 8080
+  error:
+    # Nunca devuelvas el stack trace al cliente en produccion.
+    include-stacktrace: never
+    include-message: never
+  forward-headers-strategy: framework   # respeta X-Forwarded-For
+
+spring:
+  jpa:
+    show-sql: false
+  mvc:
+    problemdetails:
+      enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      # Railway solo necesita saber UP/DOWN; los detalles filtran nombres de
+      # tablas y del datasource.
+      show-details: never
+
+logging:
+  level:
+    root: INFO
+    org.hibernate.orm: warn
+    com.inventarioar: info

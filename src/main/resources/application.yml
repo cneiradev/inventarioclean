@@ -1,0 +1,73 @@
+server:
+  port: 8080
+
+spring:
+  # Carga el .env de la raiz del backend como properties. Spring Boot no lee
+  # .env por defecto, con este import se resuelve solo (optional: si no
+  # existe, no falla el arranque).
+  config:
+    import: optional:file:.env[.properties]
+  application:
+    name: inventarioclean-backend
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate      # Flyway es dueno del schema
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+    out-of-service: false
+  datasource:
+    # En produccion estos valores vienen de variables de entorno de Railway.
+    # OJO con Supabase: usar SIEMPRE el connection pooler (puerto 6543),
+    # Postgres de Supabase tiene limite de conexiones. Flyway debe correr
+    # contra la conexion directa (5432) porque el transaction pooler no
+    # soporta las transacciones del schema history.
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/inventario_clean}
+    username: ${SPRING_DATASOURCE_USERNAME:${DB_USERNAME:postgres}}
+    password: ${SPRING_DATASOURCE_PASSWORD:${DB_PASSWORD:postgres}}
+    hikari:
+      # Pool pequeno a proposito: el pooler de Supabase ya multiplexa.
+      # 5 conexiones de la app = 5 conexiones reales de Postgres.
+      maximum-pool-size: 5
+      minimum-idle: 1
+
+app:
+  cors:
+    # Origenes permitidos, separados por coma. En produccion:
+    # ALLOWED_ORIGINS=https://inventarioclean.vercel.app
+    allowed-origins: ${ALLOWED_ORIGINS:http://localhost:5173}
+  jwt:
+    # SIN valor por defecto a proposito: si falta, la app falla el arranque
+    # (ver JwtProperties). Debe ser de 32 bytes o mas para HS256.
+    # Generar: openssl rand -base64 48
+    secret: ${JWT_SECRET:}
+    # Duracion de la sesion. Corta a proposito: el panel es de uso interno.
+    expiration-minutes: ${JWT_EXPIRATION_MINUTES:480}
+  # Clave usada por Flyway/seed para crear el admin inicial.
+  # SOLO desarrollo: en produccion el admin se crea a mano o por un
+  # endpoint de bootstrap protegido. Ver README.
+  bootstrap:
+    admin-username: ${BOOTSTRAP_ADMIN_USERNAME:ADMIN}
+    admin-password: ${BOOTSTRAP_ADMIN_PASSWORD:}
+
+# Solo /health e /info expuestos (lo que Railway usa para verificar el
+# deploy), sin datos sensibles.
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: never
+
+logging:
+  level:
+    org.hibernate.orm: info
+    org.flywaydb: info
+    com.inventarioclean: info

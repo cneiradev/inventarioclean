@@ -1,0 +1,22 @@
+# Configuracion de Railway. El backend corre como un unico servicio Spring
+# Boot (Java 21); los modulos logicos (usuario, producto, movimiento, renta,
+# auditoria) viven dentro del mismo proceso, separados por paquetes, no por
+# deploys. Esa es la decision del README: un dominio cohesivo, stock y
+# movimientos siempre en la misma transaccion.
+#
+# La base de datos NO la provee Railway: se usa Supabase Postgres.
+
+[build]
+# Railway detecta el Dockerfile del repo y lo usa en lugar de Nixpacks.
+builder = "dockerfile"
+
+[deploy]
+# El arranque NO se define aca a proposito: lo hace el ENTRYPOINT del
+# Dockerfile. Un startCommand en este archivo pisa ese ENTRYPOINT y se ejecuta
+# desde un directorio donde el jar no existe.
+healthcheckPath = "/actuator/health"
+healthcheckTimeout = 100
+# No activar el modo Serverless: su cold start se nota en cada visita a un
+# panel de uso interno.
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 5
