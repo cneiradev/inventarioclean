@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.auth.dto;
+package com.inventarioclean.auth.dto;
 
 import com.inventarioclean.usuario.Rol;
 import lombok.AllArgsConstructor;

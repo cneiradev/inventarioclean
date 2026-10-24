@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.movimiento;
+package com.inventarioclean.movimiento;
 
 import com.inventarioclean.common.exception.OperacionInvalidaException;
 import com.inventarioclean.common.exception.RecursoNoEncontradoException;

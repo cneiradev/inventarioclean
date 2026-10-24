@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.dashboard;
+package com.inventarioclean.dashboard;
 
 import com.inventarioclean.auditoria.AccionAuditoria;
 import com.inventarioclean.auditoria.Auditoria;

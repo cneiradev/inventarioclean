@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.usuario;
+package com.inventarioclean.usuario;
 
 import com.inventarioclean.common.security.UsuarioPrincipal;
 import com.inventarioclean.usuario.dto.ActualizarUsuarioRequest;

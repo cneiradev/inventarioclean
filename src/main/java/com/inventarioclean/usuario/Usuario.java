@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.usuario;
+package com.inventarioclean.usuario;
 
 import jakarta.persistence.*;
 import lombok.*;

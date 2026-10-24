@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.usuario.dto;
+package com.inventarioclean.usuario.dto;
 
 import com.inventarioclean.usuario.Rol;
 

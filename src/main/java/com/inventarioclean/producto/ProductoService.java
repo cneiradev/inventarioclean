@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.producto;
+package com.inventarioclean.producto;
 
 import com.inventarioclean.auditoria.AccionAuditoria;
 import com.inventarioclean.auditoria.AuditoriaService;

@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.producto;
+package com.inventarioclean.producto;
 
 import com.inventarioclean.common.security.UsuarioPrincipal;
 import com.inventarioclean.producto.dto.ProductoRequest;

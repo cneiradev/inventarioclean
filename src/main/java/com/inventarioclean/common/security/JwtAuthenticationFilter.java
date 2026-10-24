@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.common.security;
+package com.inventarioclean.common.security;
 
 import com.inventarioclean.usuario.Rol;
 import com.inventarioclean.usuario.Usuario;

@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.common.config;
+package com.inventarioclean.common.config;
 
 import com.inventarioclean.common.security.JwtAuthenticationFilter;
 import org.springframework.context.annotation.Bean;

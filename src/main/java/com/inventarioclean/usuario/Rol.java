@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.usuario;
+package com.inventarioclean.usuario;
 
 /**
  * Roles del sistema, en jerarquia de mayor a menor permisos.

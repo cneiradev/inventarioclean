@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.auditoria;
+package com.inventarioclean.auditoria;
 
 import com.inventarioclean.usuario.Usuario;
 import jakarta.persistence.*;

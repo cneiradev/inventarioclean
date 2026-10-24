@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.usuario;
+package com.inventarioclean.usuario;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

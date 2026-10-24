@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.movimiento;
+package com.inventarioclean.movimiento;
 
 import com.inventarioclean.producto.Producto;
 import com.inventarioclean.usuario.Usuario;

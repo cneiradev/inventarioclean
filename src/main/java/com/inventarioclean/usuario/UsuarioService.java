@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.usuario;
+package com.inventarioclean.usuario;
 
 import com.inventarioclean.auditoria.AccionAuditoria;
 import com.inventarioclean.auditoria.AuditoriaService;

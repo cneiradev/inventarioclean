@@ -1,4 +1,4 @@
-﻿package com.inventarioclean;
+package com.inventarioclean;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

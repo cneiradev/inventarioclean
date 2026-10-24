@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.auth;
+package com.inventarioclean.auth;
 
 import com.inventarioclean.auth.dto.LoginRequest;
 import com.inventarioclean.auth.dto.LoginResponse;

@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.producto;
+package com.inventarioclean.producto;
 
 import jakarta.persistence.*;
 import lombok.*;

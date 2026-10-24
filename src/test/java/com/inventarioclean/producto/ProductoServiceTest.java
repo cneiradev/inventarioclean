@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.producto;
+package com.inventarioclean.producto;
 
 import com.inventarioclean.auditoria.AuditoriaRepository;
 import com.inventarioclean.movimiento.MovimientoRepository;

@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.movimiento;
+package com.inventarioclean.movimiento;
 
 /**
  * Tipo de movimiento de stock.

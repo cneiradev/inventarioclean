@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.producto;
+package com.inventarioclean.producto;
 
 /**
  * Tipo de comercio: para que se usa el producto.

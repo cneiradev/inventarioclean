@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.common.exception;
+package com.inventarioclean.common.exception;
 
 /**
  * Credenciales incorrectas en el login.

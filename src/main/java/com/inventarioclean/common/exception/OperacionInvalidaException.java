@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.common.exception;
+package com.inventarioclean.common.exception;
 
 /**
  * La operacion es valida en forma pero no se puede ejecutar: no hay stock

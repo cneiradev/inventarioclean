@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.common.exception;
+package com.inventarioclean.common.exception;
 
 /** El recurso solicitado no existe (SKU, username, codigo de renta...). */
 public class RecursoNoEncontradoException extends RuntimeException {

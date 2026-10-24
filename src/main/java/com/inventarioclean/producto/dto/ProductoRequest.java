@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.producto.dto;
+package com.inventarioclean.producto.dto;
 
 import com.inventarioclean.producto.EstadoProducto;
 import com.inventarioclean.producto.TipoComercio;

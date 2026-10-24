@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.auditoria;
+package com.inventarioclean.auditoria;
 
 import com.inventarioclean.common.security.UsuarioPrincipal;
 import lombok.RequiredArgsConstructor;

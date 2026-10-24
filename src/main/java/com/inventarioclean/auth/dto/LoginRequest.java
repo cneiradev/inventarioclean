@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.auth.dto;
+package com.inventarioclean.auth.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;

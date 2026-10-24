@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.common.config;
+package com.inventarioclean.common.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.validation.annotation.Validated;

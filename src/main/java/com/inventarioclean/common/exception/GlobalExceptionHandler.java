@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.common.exception;
+package com.inventarioclean.common.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

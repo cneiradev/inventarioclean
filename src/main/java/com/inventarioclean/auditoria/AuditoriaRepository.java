@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.auditoria;
+package com.inventarioclean.auditoria;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

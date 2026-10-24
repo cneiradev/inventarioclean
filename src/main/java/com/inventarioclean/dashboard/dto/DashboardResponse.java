@@ -1,4 +1,4 @@
-﻿package com.inventarioclean.dashboard.dto;
+package com.inventarioclean.dashboard.dto;
 
 import java.util.List;
 
